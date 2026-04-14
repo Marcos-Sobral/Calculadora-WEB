@@ -1,0 +1,101 @@
+:root {
+    /* Tema claro */
+    --bg-light: #f0f0f0;
+    --calc-bg-light: #ffffff;
+    --input-bg-light: #eee;
+    --input-text-light: #000;
+    --button-bg-light: #ddd;
+    --button-text-light: #000;
+
+    /* Tema escuro */
+    --bg-dark: #222222;
+    --calc-bg-dark: #333333;
+    --input-bg-dark: #fff;
+    --input-text-dark: #000;
+    --button-bg-dark: #555;
+    --button-text-dark: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+/* Calculadora base */
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+                rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px;
+}
+
+.calculadora input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    text-align: right;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 10px;
+}
+
+.botoes button:nth-child(17) {
+    grid-column: span 2;
+}
+
+button {
+    height: 70px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.25em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+button:hover {
+    color: black;
+    background-color: #d0d0d0;
+}
+
+/* Tema escuro */
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--button-text-dark);
+}
+
+body.dark .calculadora {
+    background-color: var(--calc-bg-dark);
+}
+
+body.dark .calculadora input {
+    background-color: var(--input-bg-dark);
+    color: var(--input-text-dark);
+}
+
+body.dark button {
+    background-color: var(--button-bg-dark);
+    color: var(--button-text-dark);
+}
