@@ -6,6 +6,10 @@
     <title>Calculadora - TURMA 202</title>
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="shortcut icon" href="src/img/logo.png" type="image/x-icon">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#222222">
+    <link rel="apple-touch-icon" href="src/img/logo.png">
 </head>
 <body>
     <main>
@@ -41,5 +45,15 @@
     <script src="src/js/tema.js"></script>
     <script src="src/js/calcular.js"></script>
     <script src="src/js/teclado.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .catch(() => { /* sem impacto */ });
+            });
+        }
+    </script>
 </body>
 </html>
+

@@ -1,0 +1,19 @@
+{
+  "name": "Calculadora - TURMA 202",
+  "short_name": "Calculadora",
+  "description": "Calculadora offline como PWA.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f0f0f0",
+  "theme_color": "#222222",
+  "icons": [
+    {
+      "src": "src/img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
